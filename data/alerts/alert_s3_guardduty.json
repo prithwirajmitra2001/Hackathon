@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "2.0",
+  "accountId": "123456789012",
+  "region": "us-east-1",
+  "partition": "aws",
+  "id": "7ec6b1d2e4f94a6a9c1b2f3e4d5c6b7a",
+  "arn": "arn:aws:guardduty:us-east-1:123456789012:detector/12abc34d567e8fa901bc2d34e56789f0/finding/7ec6b1d2e4f94a6a9c1b2f3e4d5c6b7a",
+  "type": "Policy:S3/BucketPublicAccessGranted",
+  "resource": {
+    "resourceType": "S3Bucket",
+    "accessKeyDetails": {
+      "accessKeyId": "ASIAEXAMPLE7QK2LZ3VB",
+      "principalId": "AIDAEXAMPLEPRINCIPAL01",
+      "userName": "svc-reporting",
+      "userType": "IAMUser"
+    },
+    "s3BucketDetails": [
+      {
+        "arn": "arn:aws:s3:::acme-finance-exports",
+        "name": "acme-finance-exports",
+        "type": "Destination",
+        "createdAt": "2024-03-02T10:14:00.000Z",
+        "tags": [
+          {
+            "key": "data-classification",
+            "value": "confidential"
+          },
+          {
+            "key": "owner",
+            "value": "finance-analytics"
+          }
+        ],
+        "defaultServerSideEncryption": {
+          "encryptionType": "AES256"
+        },
+        "publicAccess": {
+          "effectivePermission": "PUBLIC",
+          "permissionConfiguration": {
+            "bucketLevelPermissions": {
+              "bucketPolicy": {
+                "allowsPublicReadAccess": true,
+                "allowsPublicWriteAccess": false
+              },
+              "blockPublicAccess": {
+                "ignorePublicAcls": false,
+                "restrictPublicBuckets": false,
+                "blockPublicAcls": false,
+                "blockPublicPolicy": false
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "service": {
+    "serviceName": "guardduty",
+    "detectorId": "12abc34d567e8fa901bc2d34e56789f0",
+    "action": {
+      "actionType": "AWS_API_CALL",
+      "awsApiCallAction": {
+        "api": "PutBucketPolicy",
+        "serviceName": "s3.amazonaws.com",
+        "callerType": "Remote IP",
+        "remoteIpDetails": {
+          "ipAddressV4": "203.0.113.50",
+          "organization": {
+            "asn": "64500",
+            "asnOrg": "EXAMPLE-HOSTING-NL"
+          },
+          "country": {
+            "countryName": "Netherlands"
+          }
+        }
+      }
+    },
+    "count": 1,
+    "eventFirstSeen": "2026-11-18T08:41:12.000Z",
+    "eventLastSeen": "2026-11-18T08:41:12.000Z",
+    "archived": false
+  },
+  "severity": 8,
+  "title": "Amazon S3 Public Anonymous Access was granted for the S3 bucket acme-finance-exports.",
+  "description": "The S3 bucket acme-finance-exports was made publicly readable by PutBucketPolicy, called by IAM user svc-reporting from 203.0.113.50.",
+  "createdAt": "2026-11-18T08:41:40.512Z",
+  "updatedAt": "2026-11-18T08:41:40.512Z"
+}

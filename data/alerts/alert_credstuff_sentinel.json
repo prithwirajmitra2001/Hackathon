@@ -1,0 +1,19 @@
+{
+  "TimeGenerated": "2026-11-18T05:20:31Z",
+  "SystemAlertId": "e7a1d2c3-4b5f-4a6e-9d8c-7b6a5f4e3d2c",
+  "AlertName": "Possible credential stuffing: high failure rate across many accounts from rotating IPs",
+  "AlertSeverity": "Medium",
+  "ProductName": "Microsoft Sentinel",
+  "ProviderName": "ASI Scheduled Alerts",
+  "VendorName": "Microsoft",
+  "Status": "New",
+  "CompromisedEntity": "a.khan@acme-corp.example",
+  "Tactics": "CredentialAccess",
+  "Techniques": "[\"T1110\"]",
+  "SubTechniques": "[\"T1110.004\"]",
+  "StartTime": "2026-11-18T04:02:00Z",
+  "EndTime": "2026-11-18T05:15:00Z",
+  "Description": "4,812 failed sign-ins across 1,203 accounts from 5 IPs in 73 minutes, followed by 2 successful sign-ins. Analytics rule: CRED-STUFF-01.",
+  "Entities": "[{\"$id\":\"2\",\"Type\":\"ip\",\"Address\":\"198.51.100.10\"},{\"$id\":\"3\",\"Type\":\"ip\",\"Address\":\"198.51.100.11\"},{\"$id\":\"4\",\"Type\":\"ip\",\"Address\":\"198.51.100.12\"},{\"$id\":\"5\",\"Type\":\"ip\",\"Address\":\"198.51.100.13\"},{\"$id\":\"6\",\"Type\":\"ip\",\"Address\":\"198.51.100.14\"},{\"$id\":\"7\",\"Type\":\"account\",\"Name\":\"a.khan\",\"UPNSuffix\":\"acme-corp.example\",\"IsPrivileged\":false},{\"$id\":\"8\",\"Type\":\"account\",\"Name\":\"m.lopez\",\"UPNSuffix\":\"acme-corp.example\",\"IsPrivileged\":false}]",
+  "ExtendedProperties": "{\"FailedSignIns\":\"4812\",\"DistinctAccounts\":\"1203\",\"SuccessfulSignIns\":\"2\",\"MfaSatisfied\":\"false\",\"Application\":\"Office 365 Exchange Online\",\"UserAgent\":\"python-requests/2.31.0\",\"ASN\":\"AS64501 EXAMPLE-VPS\"}"
+}

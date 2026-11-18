@@ -1,0 +1,59 @@
+{
+  "timestamp": "2026-11-18T03:12:44.118+0000",
+  "rule": {
+    "level": 15,
+    "description": "Ransomware behavior: mass file rename to .lockbit and ransom note created",
+    "id": "100512",
+    "firedtimes": 214,
+    "mail": true,
+    "groups": [
+      "ransomware",
+      "syscheck",
+      "windows"
+    ],
+    "mitre": {
+      "id": [
+        "T1486"
+      ],
+      "tactic": [
+        "Impact"
+      ],
+      "technique": [
+        "Data Encrypted for Impact"
+      ]
+    }
+  },
+  "agent": {
+    "id": "014",
+    "name": "FS-FIN-02",
+    "ip": "10.20.4.18"
+  },
+  "manager": {
+    "name": "wazuh-manager-01"
+  },
+  "id": "1795469564.881234",
+  "decoder": {
+    "name": "windows_eventchannel"
+  },
+  "location": "EventChannel",
+  "full_log": "File 'D:\\Shares\\Finance\\Q3_close.xlsx' renamed to 'D:\\Shares\\Finance\\Q3_close.xlsx.lockbit' by C:\\ProgramData\\svc_update.exe (PID 6124). Ransom note D:\\Shares\\Finance\\README-RESTORE.txt created.",
+  "syscheck": {
+    "path": "D:\\Shares\\Finance\\Q3_close.xlsx.lockbit",
+    "event": "added",
+    "sha256_after": "9f2c4e7a1b8d3f6e0c5a9b2d7e4f1a8c3b6d9e2f5a8c1b4e7d0a3f6c9b2e5d8a"
+  },
+  "data": {
+    "process": {
+      "name": "svc_update.exe",
+      "path": "C:\\ProgramData\\svc_update.exe",
+      "sha256": "4b8e1d7a2c5f9e3b6a0d4c8f2e7b1a5d9c3f6e0b4a8d2c7f1e5b9a3d6c0f4e8b"
+    },
+    "correlation": {
+      "rule": "corr-ia-001 (custom)",
+      "initial_access_suspect": "CTX-GW-01",
+      "vulnerability.cve": "CVE-2023-4966",
+      "note": "Wazuh vulnerability detector flagged CVE-2023-4966 on CTX-GW-01 (open since 2023-10-18); gateway session from 198.51.100.23 preceded first rename by 41 min.",
+      "src_ip": "198.51.100.23"
+    }
+  }
+}

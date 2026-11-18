@@ -1,0 +1,19 @@
+{
+  "TimeGenerated": "2026-11-18T07:55:03Z",
+  "SystemAlertId": "b3d9c1e2-7f4a-4c55-9a10-3e2f1d0c9b8a",
+  "AlertName": "Email reported by user as malware or phish",
+  "AlertSeverity": "High",
+  "ProductName": "Microsoft Defender for Office 365",
+  "ProviderName": "OATP",
+  "VendorName": "Microsoft",
+  "Status": "New",
+  "CompromisedEntity": "j.rivera@acme-corp.example",
+  "Tactics": "InitialAccess, CredentialAccess",
+  "Techniques": "[\"T1566\"]",
+  "StartTime": "2026-11-18T07:42:10Z",
+  "EndTime": "2026-11-18T07:51:47Z",
+  "Description": "A user reported a message as phishing. The message was delivered to 6 mailboxes and 1 recipient clicked a link. The link uses a file:// UNC path with a '!' moniker, a pattern associated with CVE-2024-21413 (MonikerLink).",
+  "Entities": "[{\"$id\":\"2\",\"Type\":\"mailbox\",\"MailboxPrimaryAddress\":\"j.rivera@acme-corp.example\",\"DisplayName\":\"Jordan Rivera\",\"Upn\":\"j.rivera@acme-corp.example\"},{\"$id\":\"3\",\"Type\":\"mailMessage\",\"NetworkMessageId\":\"a1f3c9e0-55d2-4b7e-8c1a-0d9e8f7a6b5c\",\"InternetMessageId\":\"<20261118073901.4F2A@mail.acme-billing.test>\",\"Sender\":\"invoices@acme-billing.test\",\"P1Sender\":\"invoices@acme-billing.test\",\"Subject\":\"Overdue invoice #INV-20931 - action required\",\"Recipient\":\"j.rivera@acme-corp.example\",\"DeliveryAction\":\"Delivered\",\"Urls\":[\"https://login.acme-billing.test/sso/verify?id=20931\",\"file://203.0.113.77/share/INV-20931.rtf!payload\"]},{\"$id\":\"4\",\"Type\":\"url\",\"Url\":\"https://login.acme-billing.test/sso/verify?id=20931\"},{\"$id\":\"5\",\"Type\":\"url\",\"Url\":\"file://203.0.113.77/share/INV-20931.rtf!payload\"},{\"$id\":\"6\",\"Type\":\"ip\",\"Address\":\"203.0.113.77\"}]",
+  "ExtendedProperties": "{\"Delivery action\":\"Delivered\",\"Recipients count\":\"6\",\"Clicked\":\"true\",\"Credentials submitted\":\"unknown\",\"Attachment opened\":\"false\",\"Department\":\"Finance\",\"Detected link pattern\":\"file:// UNC link with '!' moniker\"}",
+  "RemediationSteps": "[\"Investigate the email and remove it from all mailboxes.\"]"
+}

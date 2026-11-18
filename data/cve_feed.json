@@ -1,0 +1,342 @@
+{
+  "feed_version": "2026.11.18",
+  "generated": "2026-11-18T06:00:00Z",
+  "sources": [
+    "NVD CVE API 2.0 (subset)",
+    "CISA KEV",
+    "FIRST EPSS",
+    "CISA Vulnrichment (SSVC)"
+  ],
+  "records": [
+    {
+      "cve_id": "CVE-2023-4966",
+      "nickname": "Citrix Bleed",
+      "title": "Citrix NetScaler ADC and NetScaler Gateway Buffer Overflow Vulnerability",
+      "description": "Sensitive information disclosure in NetScaler ADC and NetScaler Gateway when configured as a Gateway or AAA virtual server. Leaks valid session tokens, letting attackers bypass passwords and MFA.",
+      "vendor": "Citrix",
+      "product": "NetScaler ADC / NetScaler Gateway",
+      "cwe": [
+        "CWE-119"
+      ],
+      "cvss_v31": {
+        "base_score": 9.4,
+        "severity": "CRITICAL",
+        "source": "CNA (Citrix)"
+      },
+      "nvd_status": "Analyzed",
+      "kev": {
+        "listed": true,
+        "date_added": "2023-10-18",
+        "due_date": "2023-11-08",
+        "known_ransomware_use": "Known",
+        "required_action": "Apply mitigations and kill all active and persistent sessions per vendor instructions OR discontinue use of the product if mitigations are unavailable."
+      },
+      "epss": {
+        "score": 0.99999,
+        "percentile": 0.99997,
+        "date": "2026-11-18"
+      },
+      "ssvc": {
+        "exploitation": "active",
+        "automatable": "yes",
+        "technical_impact": "total",
+        "note": "automatable / technical_impact illustrative"
+      },
+      "attack": [
+        "T1190",
+        "T1550.004"
+      ],
+      "response_tags": [
+        "patch_appliance",
+        "session_revocation"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-21413",
+      "nickname": "MonikerLink",
+      "title": "Microsoft Outlook Improper Input Validation Vulnerability",
+      "description": "Crafted file:// links with a '!' moniker bypass Outlook Protected View and can leak NTLM credentials over SMB or lead to code execution.",
+      "vendor": "Microsoft",
+      "product": "Outlook / Office",
+      "cwe": [
+        "CWE-20"
+      ],
+      "cvss_v31": {
+        "base_score": 9.8,
+        "severity": "CRITICAL",
+        "source": "CNA (Microsoft)"
+      },
+      "nvd_status": "Analyzed",
+      "kev": {
+        "listed": true,
+        "date_added": "2025-02-06",
+        "due_date": "2025-02-27",
+        "known_ransomware_use": "Unknown",
+        "required_action": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable."
+      },
+      "epss": {
+        "score": 0.9466,
+        "percentile": 0.99859,
+        "date": "2026-11-18"
+      },
+      "ssvc": {
+        "exploitation": "active",
+        "automatable": "no",
+        "technical_impact": "total",
+        "note": "automatable / technical_impact illustrative"
+      },
+      "attack": [
+        "T1566.002",
+        "T1187"
+      ],
+      "response_tags": [
+        "patch_client",
+        "smb_block"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-23397",
+      "nickname": "Outlook NTLM leak",
+      "title": "Microsoft Office Outlook Privilege Escalation Vulnerability",
+      "description": "A crafted calendar or email item makes Outlook connect to an attacker SMB share and leak the user's Net-NTLMv2 hash, with no user interaction.",
+      "vendor": "Microsoft",
+      "product": "Office Outlook",
+      "cwe": [
+        "CWE-294"
+      ],
+      "cvss_v31": {
+        "base_score": 9.8,
+        "severity": "CRITICAL",
+        "source": "CNA (Microsoft)"
+      },
+      "nvd_status": "Analyzed",
+      "kev": {
+        "listed": true,
+        "date_added": "2023-03-14",
+        "due_date": "2023-04-04",
+        "known_ransomware_use": "Unknown",
+        "required_action": "Apply updates per vendor instructions."
+      },
+      "epss": {
+        "score": 0.97159,
+        "percentile": 0.99895,
+        "date": "2026-11-18"
+      },
+      "ssvc": {
+        "exploitation": "active",
+        "automatable": "yes",
+        "technical_impact": "total",
+        "note": "automatable / technical_impact illustrative"
+      },
+      "attack": [
+        "T1187"
+      ],
+      "response_tags": [
+        "patch_client",
+        "smb_block"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-44487",
+      "nickname": "HTTP/2 Rapid Reset",
+      "title": "HTTP/2 Rapid Reset Attack Vulnerability",
+      "description": "HTTP/2 request cancellation can reset many streams quickly, enabling very large layer-7 DDoS attacks (exploited Aug-Oct 2023).",
+      "vendor": "IETF",
+      "product": "HTTP/2",
+      "cwe": [
+        "CWE-400"
+      ],
+      "cvss_v31": {
+        "base_score": 7.5,
+        "severity": "HIGH",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "source": "NVD"
+      },
+      "nvd_status": "Analyzed",
+      "kev": {
+        "listed": true,
+        "date_added": "2023-10-10",
+        "due_date": "2023-10-31",
+        "known_ransomware_use": "Unknown",
+        "required_action": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable."
+      },
+      "epss": {
+        "score": 0.99999,
+        "percentile": 0.99998,
+        "date": "2026-11-18"
+      },
+      "ssvc": {
+        "exploitation": "active",
+        "automatable": "yes",
+        "technical_impact": "partial",
+        "note": "automatable / technical_impact illustrative"
+      },
+      "attack": [
+        "T1499.002"
+      ],
+      "response_tags": [
+        "patch_server",
+        "rate_limit"
+      ]
+    },
+    {
+      "cve_id": "CVE-2021-44228",
+      "nickname": "Log4Shell",
+      "title": "Apache Log4j2 Remote Code Execution Vulnerability",
+      "description": "JNDI lookup in Log4j2 lets an attacker who controls log messages execute arbitrary code. (Decoy: no alert in this demo maps to it.)",
+      "vendor": "Apache",
+      "product": "Log4j2",
+      "cwe": [
+        "CWE-917"
+      ],
+      "cvss_v31": {
+        "base_score": 10,
+        "severity": "CRITICAL",
+        "source": "NVD"
+      },
+      "nvd_status": "Analyzed",
+      "kev": {
+        "listed": true,
+        "date_added": "2021-12-10",
+        "due_date": "2021-12-24",
+        "known_ransomware_use": "Known",
+        "required_action": "For all affected software assets for which updates exist, apply updates per vendor instructions."
+      },
+      "epss": {
+        "score": 0.99999,
+        "percentile": 1,
+        "date": "2026-11-18"
+      },
+      "ssvc": {
+        "exploitation": "active",
+        "automatable": "yes",
+        "technical_impact": "total",
+        "note": "illustrative"
+      },
+      "attack": [
+        "T1190"
+      ],
+      "response_tags": [
+        "patch_server"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-3400",
+      "nickname": "PAN-OS GlobalProtect RCE",
+      "title": "Palo Alto Networks PAN-OS Command Injection Vulnerability",
+      "description": "Command injection via arbitrary file creation in the GlobalProtect feature of PAN-OS allows unauthenticated root code execution. (Decoy.)",
+      "vendor": "Palo Alto Networks",
+      "product": "PAN-OS",
+      "cwe": [
+        "CWE-77",
+        "CWE-20"
+      ],
+      "cvss_v31": {
+        "base_score": 10,
+        "severity": "CRITICAL",
+        "source": "NVD"
+      },
+      "nvd_status": "Analyzed",
+      "kev": {
+        "listed": true,
+        "date_added": "2024-04-12",
+        "due_date": "2024-04-19",
+        "known_ransomware_use": "Known",
+        "required_action": "Apply mitigations per vendor instructions as they become available."
+      },
+      "epss": {
+        "score": 0.99999,
+        "percentile": 1,
+        "date": "2026-11-18"
+      },
+      "ssvc": {
+        "exploitation": "active",
+        "automatable": "yes",
+        "technical_impact": "total",
+        "note": "illustrative"
+      },
+      "attack": [
+        "T1190"
+      ],
+      "response_tags": [
+        "patch_appliance"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-34362",
+      "nickname": "MOVEit SQLi",
+      "title": "Progress MOVEit Transfer SQL Injection Vulnerability",
+      "description": "SQL injection in MOVEit Transfer web application, mass-exploited by the Cl0p group in 2023. (Decoy.)",
+      "vendor": "Progress",
+      "product": "MOVEit Transfer",
+      "cwe": [
+        "CWE-89"
+      ],
+      "cvss_v31": {
+        "base_score": 9.8,
+        "severity": "CRITICAL",
+        "source": "NVD"
+      },
+      "nvd_status": "Analyzed",
+      "kev": {
+        "listed": true,
+        "date_added": "2023-06-02",
+        "due_date": "2023-06-23",
+        "known_ransomware_use": "Known",
+        "required_action": "Apply updates per vendor instructions."
+      },
+      "epss": {
+        "score": 0.99934,
+        "percentile": 0.99971,
+        "date": "2026-11-18"
+      },
+      "ssvc": {
+        "exploitation": "active",
+        "automatable": "yes",
+        "technical_impact": "total",
+        "note": "illustrative"
+      },
+      "attack": [
+        "T1190"
+      ],
+      "response_tags": [
+        "patch_server"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-38545",
+      "nickname": "curl SOCKS5 overflow",
+      "title": "curl SOCKS5 heap buffer overflow",
+      "description": "Heap overflow in curl's SOCKS5 proxy handshake with long hostnames. Not in CISA KEV. (Decoy.)",
+      "vendor": "curl",
+      "product": "curl / libcurl",
+      "cwe": [
+        "CWE-787"
+      ],
+      "cvss_v31": {
+        "base_score": 9.8,
+        "severity": "CRITICAL",
+        "source": "NVD"
+      },
+      "nvd_status": "Analyzed",
+      "kev": {
+        "listed": false
+      },
+      "epss": {
+        "score": 0.78317,
+        "percentile": 0.99587,
+        "date": "2026-11-18"
+      },
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "total",
+        "note": "illustrative"
+      },
+      "attack": [],
+      "response_tags": [
+        "patch_client"
+      ]
+    }
+  ]
+}
